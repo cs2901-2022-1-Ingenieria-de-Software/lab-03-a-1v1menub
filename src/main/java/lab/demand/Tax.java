@@ -15,7 +15,7 @@ public class Tax {
         }
     }
 
-    public void addTax(String country,double tax) {
+    public void putTax(String country,double tax) {
         taxes.put(country, tax);
     }
 }

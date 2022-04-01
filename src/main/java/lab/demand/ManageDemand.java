@@ -22,27 +22,15 @@ public class ManageDemand {
         return quantities * taxes;
     }
 
-    public double calculateTotalForWithAdditionalByCountry(List<Order> orders, double defaultAdditionalColombia, double defaultAdditionalPeru, double defaultAdditionalBrazil){
-        // Calculate additionals by country
+    public double calculateTotalForWithAdditionalByCountry(List<Order> orders, Tax taxes){
         double taxes = 0.0;
-        for (Order order : orders) {
-            String currCountry = order.getCountry();
-            if (currCountry.equals("PE")) {
-                taxes += defaultAdditionalPeru;
-            } else if (currCountry.equals("BR")) {
-                taxes += defaultAdditionalBrazil;
-            } else {
-                taxes += defaultAdditionalColombia;
-            }
-        }
-
-        // Calculate Total
         double quantities = 0.0;
         for (Order order : orders) {
+            double tax = taxes.calculateTax(order.getCountry());
             double temp = order.getQuantity();
             quantities += temp;
+            taxes += tax;
         }
-
         return quantities * taxes;
     }
 
