@@ -25,5 +25,4 @@ public class Order {
     public void setQuantity(Long quantity) {
         this.quantity = quantity;
     }
-    
 }

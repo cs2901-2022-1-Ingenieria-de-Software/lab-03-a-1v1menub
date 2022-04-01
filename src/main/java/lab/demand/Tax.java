@@ -1,15 +1,21 @@
 package lab.demand;
 
+import java.util.List;
+
 public class Tax {
-    
+    private Map<String, Double> taxes = new HashMap<String, Double>();
+
     public double calculateTax(String country) {
-        if (country.equals("PE")) {
-            return 0.18;
-        } else if (country.equals("BR")) {
-            return 0.12;
-        } else {
+        Double tax = taxes.get(country);
+        if(tax == null) {
             return 0.0;
+        }
+        else {
+            return tax;
         }
     }
 
+    public void addTax(String country,double tax) {
+        taxes.put(country, tax);
+    }
 }

@@ -12,7 +12,8 @@ public class Main {
     public static void main (String [ ] args) {
         System.out.println("===INICIO====");
         Tax tax = new Tax();
-        
+        tax.addTax("PE", 0.18);
+        tax.addTax("BR", 0.12);
         ManageDemand mg = new ManageDemand(tax);
 
         List<Order> testOrders = buildSampleOrders();
@@ -32,5 +33,4 @@ public class Main {
         testOrders.add(new Order("BR", 10L));
         return testOrders;
     }
-
 }
