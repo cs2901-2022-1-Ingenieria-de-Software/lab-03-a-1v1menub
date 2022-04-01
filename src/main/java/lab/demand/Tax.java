@@ -1,11 +1,11 @@
 package lab.demand;
 
-import java.util.List;
+import java.util.HashMap;
 
 public class Tax {
-    private Map<String, Double> taxes = new HashMap<String, Double>();
+    private HashMap<String, Double> taxes = new HashMap<String, Double>();
 
-    public double calculateTax(String country) {
+    public Double calculateTax(String country) {
         Double tax = taxes.get(country);
         if(tax == null) {
             return 0.0;
@@ -15,7 +15,7 @@ public class Tax {
         }
     }
 
-    public void putTax(String country,double tax) {
+    public void putTax(String country,Double tax) {
         taxes.put(country, tax);
     }
 }

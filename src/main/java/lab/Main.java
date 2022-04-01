@@ -12,8 +12,8 @@ public class Main {
     public static void main (String [ ] args) {
         System.out.println("===INICIO====");
         Tax tax = new Tax();
-        tax.addTax("PE", 0.18);
-        tax.addTax("BR", 0.12);
+        tax.putTax("PE", 0.18);
+        tax.putTax("BR", 0.12);
         ManageDemand mg = new ManageDemand(tax);
 
         List<Order> testOrders = buildSampleOrders();
@@ -22,9 +22,9 @@ public class Main {
         System.out.println(String.format("RESULTADO TOTAL 1 => %s", resultFirst));
 
         Tax tax2 = new Tax();
-        tax.putTax("CO", 0.10);
-        tax.putTax("PE", 0.20);
-        tax.putTax("BR", 0.30);
+        tax2.putTax("CO", 0.10);
+        tax2.putTax("PE", 0.20);
+        tax2.putTax("BR", 0.30);
 
         double resultSecond = mg.calculateTotalForWithAdditionalByCountry(testOrders, tax2);
         System.out.println(String.format("RESULTADO TOTAL 2 => %s", resultSecond));
