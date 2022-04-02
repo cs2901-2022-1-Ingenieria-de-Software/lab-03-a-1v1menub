@@ -3,5 +3,5 @@ projectKey=cs2901-2022-1-Ingenieria-de-Software_lab-03-a-1v1menub
 serverUrl=https://sonarcloud.io
 serverVersion=8.0.0.27985
 dashboardUrl=https://sonarcloud.io/dashboard?id=cs2901-2022-1-Ingenieria-de-Software_lab-03-a-1v1menub
-ceTaskId=AX_oCJPimGdeDwm3RyJE
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AX_oCJPimGdeDwm3RyJE
+ceTaskId=AX_oKGOujScI07WxR949
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AX_oKGOujScI07WxR949
