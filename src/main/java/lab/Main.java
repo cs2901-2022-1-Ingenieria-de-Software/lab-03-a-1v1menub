@@ -10,6 +10,7 @@ import java.util.List;
 public class Main {
 
     public static void main (String [ ] args) {
+        System.out.println("===INICIO====");
         Tax tax = new Tax();
         tax.putTax("PE", 0.18);
         tax.putTax("BR", 0.12);
@@ -18,6 +19,7 @@ public class Main {
         List<Order> testOrders = buildSampleOrders();
         
         double resultFirst = mg.calculateTotal(testOrders);
+        System.out.println(String.format("RESULTADO TOTAL 1 => %s", resultFirst));
 
         Tax tax2 = new Tax();
         tax2.putTax("CO", 0.10);
@@ -25,6 +27,7 @@ public class Main {
         tax2.putTax("BR", 0.30);
 
         double resultSecond = mg.calculateTotalForWithAdditionalByCountry(testOrders, tax2);
+        System.out.println(String.format("RESULTADO TOTAL 2 => %s", resultSecond));
     }
 
     private static List<Order> buildSampleOrders() {
