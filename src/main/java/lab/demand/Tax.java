@@ -3,7 +3,7 @@ package lab.demand;
 import java.util.HashMap;
 
 public class Tax {
-    private HashMap<String, Double> taxes = new HashMap<String, Double>();
+    private HashMap<String, Double> taxes = new HashMap<>();
 
     public Double calculateTax(String country) {
         Double tax = taxes.get(country);
